@@ -1,0 +1,8 @@
+.glyphicon {
+  height: 22px;
+  width: 23px;
+}
+
+.glyphicon--user {
+  background: url(../icons/glyphicons_003_user.png) no-repeat center/cover;
+}
