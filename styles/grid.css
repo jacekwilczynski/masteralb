@@ -5,4 +5,5 @@
 
 .grid__column {
   border: 1px solid black;
+  flex: 1;
 }
