@@ -4,6 +4,6 @@
 }
 
 .grid__column {
-  outline: 1px solid black;
   flex: 1;
+  max-width: 420px;
 }
