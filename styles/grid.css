@@ -1,0 +1,8 @@
+.grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid__column {
+  border: 1px solid black;
+}
