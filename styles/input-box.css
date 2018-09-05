@@ -8,3 +8,18 @@
   border-right: 1px solid #ddd;
   padding: 8px 20px 9px 16px;
 }
+
+.input-box__body {
+  flex-grow: 1;
+}
+
+.input-box__input {
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  padding: 0 21px;
+  width: 100%;
+}
