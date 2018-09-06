@@ -18,3 +18,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
   padding: 1.25em;
 }
+
+.panel__row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}

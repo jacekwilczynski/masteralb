@@ -65,16 +65,18 @@
                     </span>
                   </label>
                 </div>
-                <label class="checkbox">
-                  <span class="checkbox__container">
-                    <input class="checkbox__input" type="checkbox">
-                    <span class="checkbox__box"><span class="checkbox__mark"></span></span>
-                  </span>
-                  <span class="checkbox__label">
-                    I have read and accept the terms of use.
-                  </span>
-                </label>
-                <button class="button button--primary" type="submit">Sign up</button>
+                <div class="form__group">
+                  <label class="checkbox">
+                    <span class="checkbox__container">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__box"><span class="checkbox__mark"></span></span>
+                    </span>
+                    <span class="checkbox__label">
+                      I have read and accept the terms of use.
+                    </span>
+                  </label>
+                </div>
+                <button class="button button--full-width button--primary" type="submit">Sign up</button>
               </form>
             </div>
           </div>
@@ -84,7 +86,7 @@
           <div class="shadow">
             <div class="panel__body">
               <form class="form" action="#">
-                <div class="form__text-inputs">
+                <div class="form__group">
                   <label class="input-box">
                     <span class="input-box__icon">
                       <span class="glyphicon glyphicon--user"></span>
@@ -112,22 +114,71 @@
                     </div>
                   </div>
                 </div>
-                <label class="checkbox">
-                  <span class="checkbox__container">
-                    <input class="checkbox__input" type="checkbox">
-                    <span class="checkbox__box"><span class="checkbox__mark"></span></span>
-                  </span>
-                  <span class="checkbox__label">
-                    Send a copy to my Email
-                  </span>
-                </label>
-                <button class="button button--primary" type="submit">Send Email</button>
+                <div class="form__group">
+                  <label class="checkbox">
+                    <span class="checkbox__container">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__box"><span class="checkbox__mark"></span></span>
+                    </span>
+                    <span class="checkbox__label">
+                      Send a copy to my Email
+                    </span>
+                  </label>
+                </div>
+                <button class="button button--full-width button--primary" type="submit">Send Email</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <div class="grid__column">B</div>
+      <div class="grid__column">
+        <div class="panel">
+          <h2 class="panel__title">Sign In Form</h2>
+          <div class="shadow">
+            <div class="panel__body">
+              <form class="form" action="#">
+                <div class="form__text-inputs">
+                  <label class="input-box">
+                    <span class="input-box__icon">
+                      <span class="glyphicon glyphicon--user"></span>
+                    </span>
+                    <span class="input-box__body">
+                      <input class="input-box__input" name="username" placeholder="Username">
+                    </span>
+                  </label>
+                  <label class="input-box">
+                    <span class="input-box__icon">
+                      <span class="glyphicon glyphicon--envelope"></span>
+                    </span>
+                    <span class="input-box__body">
+                      <input class="input-box__input" name="password" placeholder="Password">
+                    </span>
+                  </label>
+                </div>
+                <div class="panel__row">
+                  <div class="panel__col">
+                    <label class="checkbox">
+                      <span class="checkbox__container">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__box">
+                          <span class="checkbox__mark"></span>
+                        </span>
+                      </span>
+                      <span class="checkbox__label">Remember me</span>
+                    </label>
+                  </div>
+                  <span class="panel__col">
+                    <button
+                      class="button button--primary"
+                      type="submit"
+                    >Sign in</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </body>
