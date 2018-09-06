@@ -60,6 +60,10 @@
   height: auto;
 }
 
+.input-box--multiline > .input-box__input {
+  padding: 9px 15px;
+}
+
 .input-box__caret {
   content: url(../icons/caret-down.svg);
   position: absolute;

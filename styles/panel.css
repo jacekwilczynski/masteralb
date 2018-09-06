@@ -1,3 +1,7 @@
+.panel {
+  margin-bottom: 29px;
+}
+
 .panel__title {
   color: #fff;
   font-family: 'Titillium Web', sans-serif;
