@@ -22,6 +22,7 @@
 
 .input-box__body {
   flex-grow: 1;
+  position: relative;
 }
 
 .input-box__input {
@@ -49,4 +50,15 @@
 
 .input-box__input::-ms-input-placeholder { /* Microsoft Edge */
   color: #afafaf;
+}
+
+.input-box__input--dropdown {
+  padding-right: 47px;
+}
+
+.input-box__caret {
+  content: url(../icons/caret-down.svg);
+  position: absolute;
+  right: 15px;
+  top: 40%;
 }
