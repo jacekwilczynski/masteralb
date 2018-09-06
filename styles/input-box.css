@@ -2,14 +2,18 @@
   background: linear-gradient(#f7f7f7, #f2f2f2);
   border: 1px solid #c6c6c6;
   border-radius: 3px;
-  box-shadow: 1px 1.732px 0 #ffffff;
+  box-shadow: 1px 2px 0 #ffffff;
   display: flex;
   height: 39px;
   margin-bottom: 20px;
 }
 
-.input-box:last-child {
-  margin-bottom: 12px;
+.input-box--multiline {
+  height: auto;
+}
+
+.input-box--multiline > .input-box__input {
+  padding: 0.8em 1em;
 }
 
 .input-box__icon {
@@ -21,8 +25,8 @@
 }
 
 .input-box__body {
-  flex-grow: 1;
   position: relative;
+  width: 100%;
 }
 
 .input-box__input {
@@ -32,10 +36,9 @@
   color: #444;
   display: block;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.2px;
+  font-size: 1em;
   height: 100%;
-  padding: 0 21px;
+  padding: 0 1.33em;
   width: 100%;
 }
 
@@ -53,20 +56,13 @@
 }
 
 .input-box__input--dropdown {
-  padding-right: 47px;
-}
-
-.input-box--multiline {
-  height: auto;
-}
-
-.input-box--multiline > .input-box__input {
-  padding: 9px 15px;
+  padding-right: 3em;
 }
 
 .input-box__caret {
   content: url(../icons/caret-down.svg);
   position: absolute;
-  right: 15px;
-  top: 40%;
+  right: 1.5em;
+  top: 50%;
+  transform: translate(50%, -40%);
 }
