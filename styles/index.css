@@ -1,8 +1,6 @@
-@import 'reset.css';
-@import 'document.css';
+@import 'global.css';
 @import 'top-logo.css';
-@import 'container.css';
-@import 'grid.css';
+@import 'main.css';
 @import 'shadow.css';
 @import 'panel.css';
 @import 'form.css';

@@ -1,9 +1,14 @@
-.grid {
+.main {
+  margin: 0 auto;
+  max-width: 57em;
+}
+
+.main__row {
   display: flex;
   justify-content: space-between;
 }
 
-.grid__column {
+.main__column {
   flex: 1;
   max-width: 26.25em;
 }
