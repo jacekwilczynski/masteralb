@@ -3,32 +3,21 @@
 }
 
 .glyphicon--user {
-  background: url(../icons/glyphicons_003_user.png) no-repeat center/cover;
-  height: 22px;
-  width: 23px;
+  content: url(../icons/glyphicons_003_user.png);
 }
 
 .glyphicon--lock {
-  background: url(../icons/glyphicons_203_lock.png) no-repeat center/cover;
-  height: 26px;
-  width: 21px;
+  content: url(../icons/glyphicons_203_lock.png);
 }
 
 .glyphicon--envelope {
-  background: url(../icons/glyphicons_010_envelope.png) no-repeat center/cover;
-  height: 16px;
-  width: 24px;
-
+  content: url(../icons/glyphicons_010_envelope.png);
 }
 
 .glyphicon--google-maps {
-  background: url(../icons/glyphicons_242_google_maps.png) no-repeat center/cover;
-  height: 24px;
-  width: 15px;
+  content: url(../icons/glyphicons_242_google_maps.png);
 }
 
 .glyphicon--phone {
-  background: url(../icons/glyphicons_139_phone.png) no-repeat center/cover;
-  height: 25px;
-  width: 15px;
+  content: url(../icons/glyphicons_139_phone.png);
 }
