@@ -1,10 +1,14 @@
+.checkbox {
+  display: flex;
+}
+
 .checkbox__input {
   height: 25px;
   position: absolute;
   width: 25px;
 }
 
-.checkbox__container {
+.checkbox__box {
   align-items: center;
   background-color: #fff;
   border: 1px solid #c6c6c6;
@@ -17,7 +21,7 @@
   z-index: 1;
 }
 
-.checkbox__input + .checkbox__container > .checkbox__mark {
+.checkbox__input + .checkbox__box > .checkbox__mark {
   background-color: #88c814;
   border-radius: 3px;
   box-shadow: 1px 1px 0 #fff;
@@ -30,7 +34,17 @@
   transition: 0.1s;
 }
 
-.checkbox__input:checked + .checkbox__container > .checkbox__mark {
+.checkbox__input:checked + .checkbox__box > .checkbox__mark {
   opacity: 1;
   transform: scale(1, 1);
+}
+
+.checkbox__label {
+  color: rgb(175,175,175);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.03px;
+  margin-left: 13px;
+  margin-top: -1px;
 }

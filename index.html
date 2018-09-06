@@ -15,51 +15,57 @@
           <h2 class="panel__title">Register Form</h2>
           <div class="shadow">
             <div class="panel__body">
-              <form action="#">
-                <div class="input-box">
-                  <div class="input-box__icon">
-                    <span class="glyphicon glyphicon--user"></span>
+              <form class="form" action="#">
+                <div class="form__text-inputs">
+                  <div class="input-box">
+                    <div class="input-box__icon">
+                      <span class="glyphicon glyphicon--user"></span>
+                    </div>
+                    <div class="input-box__body">
+                      <input class="input-box__input" name="username" placeholder="Username">
+                    </div>
                   </div>
-                  <div class="input-box__body">
-                    <input class="input-box__input" name="username" placeholder="Username">
+                  <div class="input-box">
+                    <div class="input-box__icon">
+                      <span class="glyphicon glyphicon--lock"></span>
+                    </div>
+                    <div class="input-box__body">
+                      <input class="input-box__input" name="password" placeholder="Password">
+                    </div>
                   </div>
-                </div>
-                <div class="input-box">
-                  <div class="input-box__icon">
-                    <span class="glyphicon glyphicon--lock"></span>
+                  <div class="input-box">
+                    <div class="input-box__icon">
+                      <span class="glyphicon glyphicon--lock"></span>
+                    </div>
+                    <div class="input-box__body">
+                      <input class="input-box__input" name="passwordConfirm" placeholder="Confirm Password">
+                    </div>
                   </div>
-                  <div class="input-box__body">
-                    <input class="input-box__input" name="password" placeholder="Password">
+                  <div class="input-box">
+                    <div class="input-box__icon">
+                      <span class="glyphicon glyphicon--envelope"></span>
+                    </div>
+                    <div class="input-box__body">
+                      <input class="input-box__input" name="email" placeholder="Email">
+                    </div>
                   </div>
-                </div>
-                <div class="input-box">
-                  <div class="input-box__icon">
-                    <span class="glyphicon glyphicon--lock"></span>
-                  </div>
-                  <div class="input-box__body">
-                    <input class="input-box__input" name="passwordConfirm" placeholder="Confirm Password">
-                  </div>
-                </div>
-                <div class="input-box">
-                  <div class="input-box__icon">
-                    <span class="glyphicon glyphicon--envelope"></span>
-                  </div>
-                  <div class="input-box__body">
-                    <input class="input-box__input" name="email" placeholder="Email">
-                  </div>
-                </div>
-                <div class="input-box">
-                  <div class="input-box__icon">
-                    <span class="glyphicon glyphicon--google-maps"></span>
-                  </div>
-                  <div class="input-box__body">
-                    <input class="input-box__input" name="location" placeholder="Your Location">
+                  <div class="input-box">
+                    <div class="input-box__icon">
+                      <span class="glyphicon glyphicon--google-maps"></span>
+                    </div>
+                    <div class="input-box__body">
+                      <input class="input-box__input" name="location" placeholder="Your Location">
+                    </div>
                   </div>
                 </div>
                 <div class="checkbox">
-                  <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox">
-                    <span class="checkbox__container"><span class="checkbox__mark"></span></span>
+                  <div class="checkbox__container">
+                    <input class="checkbox__input"
+                           type="checkbox"
+                           id="form--register__checkbox--accept-terms">
+                    <span class="checkbox__box"><span class="checkbox__mark"></span></span>
+                  </div>
+                  <label class="checkbox__label" for="form--register__checkbox--accept-terms">
                     I have read and accept the terms of use.
                   </label>
                 </div>

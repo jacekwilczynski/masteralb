@@ -6,6 +6,10 @@
   margin-bottom: 20px;
 }
 
+.input-box:last-child {
+  margin-bottom: 13px;
+}
+
 .input-box__icon {
   align-items: center;
   border-right: 1px solid #ddd;
@@ -28,3 +32,4 @@
   padding: 0 21px;
   width: 100%;
 }
+
