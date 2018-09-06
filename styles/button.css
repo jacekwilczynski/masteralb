@@ -17,3 +17,13 @@
   background: linear-gradient(#a2d73f, #7ec31f);
   border: 1px solid #3a9a00;
 }
+
+.button--primary:disabled {
+  background: linear-gradient(rgba(148, 200, 62, 0.4), rgba(102, 165, 28, 0.51));
+  border: 1px solid rgba(58, 154, 0, 0.25);
+}
+
+.button--one-of-two {
+  font-size: 1.2em;
+  padding: 0.15em 2.75em 0.3em;
+}
