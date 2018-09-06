@@ -28,6 +28,7 @@
   background-color: transparent;
   border: none;
   box-sizing: border-box;
+  color: #444;
   display: block;
   font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
@@ -37,3 +38,15 @@
   width: 100%;
 }
 
+.input-box__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #afafaf;
+  opacity: 1; /* Firefox */
+}
+
+.input-box__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #afafaf;
+}
+
+.input-box__input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #afafaf;
+}
