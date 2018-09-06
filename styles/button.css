@@ -18,6 +18,10 @@
   border: 1px solid #3a9a00;
 }
 
+.button--primary:active {
+  background: linear-gradient(#83af33, #69a51b);
+}
+
 .button--primary:disabled {
   background: linear-gradient(rgba(148, 200, 62, 0.4), rgba(102, 165, 28, 0.51));
   border: 1px solid rgba(58, 154, 0, 0.25);
@@ -26,6 +30,10 @@
 .button--danger {
   background: linear-gradient(#f65e6f, #f13848);
   border: 1px solid #a21f2a;
+}
+
+.button--danger:active {
+  background: linear-gradient(#cb5766, #b92c38);
 }
 
 .button--smaller-text {
