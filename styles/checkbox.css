@@ -18,14 +18,19 @@
 }
 
 .checkbox__input + .checkbox__container > .checkbox__mark {
+  background-color: #88c814;
   border-radius: 3px;
   box-shadow: 1px 1px 0 #fff;
   display: block;
   height: 13px;
+  opacity: 0;
   outline: none;
   width: 13px;
+  transform: scale(0, 0);
+  transition: 0.1s;
 }
 
 .checkbox__input:checked + .checkbox__container > .checkbox__mark {
-  background-color: #88c814;
+  opacity: 1;
+  transform: scale(1, 1);
 }
