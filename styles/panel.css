@@ -10,5 +10,6 @@
 
 .panel__body {
   background-color: #fff;
+  border-radius: 3px;
   padding: 20px 20px 17px 22px;
 }
