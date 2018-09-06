@@ -12,7 +12,7 @@
   height: auto;
 }
 
-.input-box--multiline > .input-box__input {
+.input-box--multiline .input-box__input {
   padding: 0.8em 1em;
 }
 
