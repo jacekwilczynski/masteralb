@@ -1,5 +1,9 @@
-.header {
+.top-logo {
   text-align: center;
   padding-left: 4.9em;
   padding-top: 3.45em;
+}
+
+.top-logo__image {
+  opacity: 0.5;
 }
