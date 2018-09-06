@@ -1,17 +1,13 @@
 .button {
   border-radius: 3px;
-  box-shadow: 1px 1px 0 #ffffff;
+  box-shadow: 1px 1px 0 #fff;
   color: #fff;
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
-  font-size: 24px;
-  height: 48px;
-  letter-spacing: 0.5px;
-  margin-left: 1px;
-  padding-bottom: 2px;
-  padding-right: 2px;
-  text-shadow: 1.5px 1px 0 rgba(0, 0, 0, 0.5);
-  width: 339px;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 .button--primary {
