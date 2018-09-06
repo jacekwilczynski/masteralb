@@ -1,5 +1,9 @@
 .panel {
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
+  min-width: 20em;
+  max-width: 40em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .panel__title {

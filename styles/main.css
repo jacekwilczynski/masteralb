@@ -1,14 +1,14 @@
 .main {
   margin: 0 auto;
-  max-width: 57em;
+  max-width: 61em;
 }
 
 .main__row {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: stretch;
 }
 
 .main__column {
   flex: 1;
-  max-width: 26.25em;
 }
