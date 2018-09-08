@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import icons from './icons';
 
 const TextField = ({ type, name, label }) => (
   <label className={'text-field text-field--' + type} aria-label={label}>
-    <img className="text-field__icon" />
+    <img src={icons[type]} alt="" className="text-field__icon" />
     <input
       type="text"
       name={name}
