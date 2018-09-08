@@ -4,6 +4,7 @@
   border-radius: 3px;
   box-shadow: 1px 2px 0 #ffffff;
   display: flex;
+  position: relative;
 }
 
 .text-field__icon-container {
@@ -18,7 +19,20 @@
 .text-field__input {
   background-color: transparent;
   border: none;
+  box-sizing: border-box;
   color: #444;
   font: inherit;
   width: 100%;
+}
+
+.text-field__input--dropdown {
+  padding-right: 3em;
+}
+
+.text-field__caret {
+  content: url(caret-down.svg);
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translate(50%, -40%);
 }

@@ -16,6 +16,7 @@ textFields:
   - type: location
     name: location
     label: Your Location
+    dropdown: true
 checkbox: I have read and accept the terms of use.
 buttons:
   - type: primary

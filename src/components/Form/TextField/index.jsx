@@ -3,7 +3,7 @@ import React from 'react';
 import icons from './icons';
 import './style.css';
 
-const TextField = ({ type, name, label }) => {
+const TextField = ({ type, name, label, dropdown }) => {
   const icon = icons[type];
   return (
     <label className={'text-field text-field--' + type}>
@@ -17,8 +17,11 @@ const TextField = ({ type, name, label }) => {
         name={name}
         placeholder={label}
         aria-label={label}
-        className="text-field__input"
+        className={
+          'text-field__input' + (dropdown ? ' text-field__input--dropdown' : '')
+        }
       />
+      {dropdown && <span className="text-field__caret" />}
     </label>
   );
 };
@@ -26,7 +29,8 @@ const TextField = ({ type, name, label }) => {
 TextField.propTypes = {
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  dropdown: PropTypes.bool
 };
 
 export default TextField;
