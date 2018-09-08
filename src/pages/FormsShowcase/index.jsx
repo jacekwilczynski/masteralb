@@ -8,8 +8,8 @@ import './style.css';
 const FormsShowcase = ({ forms }) => (
   <div>
     <Header />
-    {forms.map(({ title, ...rest }) => (
-      <Panel title={title}>
+    {forms.map(({ name, title, ...rest }) => (
+      <Panel key={name} title={title}>
         <Form {...rest} />
       </Panel>
     ))}
