@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import './style.css';
 
 const Button = ({ type, disabled, label }) => (
   <button type="none" className={'button button--' + type} disabled={disabled}>
