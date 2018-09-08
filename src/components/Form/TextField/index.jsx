@@ -6,7 +6,7 @@ import './style.css';
 const TextField = ({ type, name, label }) => {
   const icon = icons[type];
   return (
-    <label className={'text-field text-field--' + type} aria-label={label}>
+    <label className={'text-field text-field--' + type}>
       {icon && (
         <span className="text-field__icon-container">
           <img src={icon} alt="" className="text-field__icon" />
@@ -16,6 +16,7 @@ const TextField = ({ type, name, label }) => {
         type="text"
         name={name}
         placeholder={label}
+        aria-label={label}
         className="text-field__input"
       />
     </label>
