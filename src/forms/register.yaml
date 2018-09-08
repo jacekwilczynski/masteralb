@@ -1,3 +1,4 @@
+name: register
 title: Register Form
 textFields:
   - type: user

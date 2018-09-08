@@ -1,3 +1,4 @@
+name: sign-in
 title: Sign In Form
 textFields:
   - type: user

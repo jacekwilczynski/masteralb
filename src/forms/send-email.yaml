@@ -1,3 +1,4 @@
+name: send-email
 title: Send Email
 textFields:
   - type: user

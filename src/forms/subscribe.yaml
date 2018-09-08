@@ -1,3 +1,4 @@
+name: subscribe
 title: Subscribe Form
 textFields:
   - type: email

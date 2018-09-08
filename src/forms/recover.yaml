@@ -1,3 +1,4 @@
+name: recover
 title: Recover Form
 textFields:
   - type: email
