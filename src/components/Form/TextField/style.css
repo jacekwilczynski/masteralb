@@ -7,6 +7,10 @@
 }
 
 .text-field__icon-container {
+  align-items: center;
+  display: flex;
+  height: 2.45em;
+  justify-content: center;
   text-align: center;
   width: 3.75em;
 }
