@@ -1,11 +1,15 @@
 name: subscribe
 title: Subscribe Form
-textFields:
-  - type: email
+inputs:
+  - type: text-field
+    subtype: email
     name: email
     label: Enter your Email
-buttons:
-  - type: primary
+  - type: button
+    subtype: primary
+    name: subscribe
     label: Subscribe
-  - type: cancel
+  - type: button
+    subtype: cancel
+    name: cancel
     label: No, thanks

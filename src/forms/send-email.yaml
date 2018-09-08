@@ -1,16 +1,22 @@
 name: send-email
 title: Send Email
-textFields:
-  - type: user
+inputs:
+  - type: text-field
+    subtype: user
     name: name
     label: Your Name
-  - type: email
+  - type: text-field
+    subtype: email
     name: email
     label: Your Email
-  - type: multiline
+  - type: text-field
+    subtype: multiline
     name: message
     label: Type your message ...
-checkbox: Send a copy to my Email
-buttons:
-  - type: primary
+  - type: checkbox
+    name: send-copy
+    label: Send a copy to my Email
+  - type: button
+    subtype: primary
+    name: send
     label: Send Email

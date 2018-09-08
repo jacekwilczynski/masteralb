@@ -1,15 +1,20 @@
 name: recover
 title: Recover Form
-textFields:
-  - type: email
+inputs:
+  - type: text-field
+    subtype: email
     name: email
     label: Enter your Email
-  - type: phone
+  - type: text-field
+    subtype: phone
     name: phone
     label: Enter your Phone number
-buttons:
-  - type: primary
+  - type: button
+    subtype: primary
+    name: send
     label: Send
-  - type: primary
+  - type: button
+    subtype: primary
+    name: done
     label: Done
     disabled: true

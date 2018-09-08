@@ -1,23 +1,31 @@
 name: register
 title: Register Form
-textFields:
-  - type: user
+inputs:
+  - type: text-field
+    subtype: user
     name: username
     label: Username
-  - type: password
+  - type: text-field
+    subtype: password
     name: password
     label: Password
-  - type: password
+  - type: text-field
+    subtype: password
     name: password-confirm
     label: Confirm Password
-  - type: email
+  - type: text-field
+    subtype: email
     name: email
     label: Email
-  - type: location
+  - type: text-field
+    subtype: location
     name: location
     label: Your Location
     dropdown: true
-checkbox: I have read and accept the terms of use.
-buttons:
-  - type: primary
+  - type: checkbox
+    name: accept-terms
+    label: I have read and accept the terms of use.
+  - type: button
+    subtype: primary
+    name: send
     label: Send Email
