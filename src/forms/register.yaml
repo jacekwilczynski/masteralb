@@ -1,0 +1,21 @@
+title: Register Form
+textFields:
+  - type: user
+    name: username
+    label: Username
+  - type: password
+    name: password
+    label: Password
+  - type: password
+    name: password-confirm
+    label: Confirm Password
+  - type: email
+    name: email
+    label: Email
+  - type: location
+    name: location
+    label: Your Location
+checkbox: I have read and accept the terms of use.
+buttons:
+  - type: primary
+    label: Send Email

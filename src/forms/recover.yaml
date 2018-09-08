@@ -1,0 +1,14 @@
+title: Recover Form
+textFields:
+  - type: email
+    name: email
+    label: Enter your Email
+  - type: phone
+    name: phone
+    label: Enter your Phone number
+buttons:
+  - type: primary
+    label: Send
+  - type: primary
+    label: Done
+    disabled: true

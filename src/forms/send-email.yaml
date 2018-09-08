@@ -1,0 +1,15 @@
+title: Send Email
+textFields:
+  - type: user
+    name: name
+    label: Your Name
+  - type: email
+    name: email
+    label: Your Email
+  - type: multiline
+    name: message
+    label: Type your message ...
+checkbox: Send a copy to my Email
+buttons:
+  - type: primary
+    label: Send Email

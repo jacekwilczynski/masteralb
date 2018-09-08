@@ -1,0 +1,12 @@
+title: Sign In Form
+textFields:
+  - type: user
+    name: username
+    label: Username
+  - type: password
+    name: password
+    label: Password
+checkbox: Remember me
+buttons:
+  - type: primary
+    label: Sign in
