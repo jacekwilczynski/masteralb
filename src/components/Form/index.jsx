@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FormGroup from './FormGroup';
+import './style.css';
 
 const Form = ({ inputs }) => (
   <form action="#" className="form">
     {inputs.map(input => (
-      <FormGroup key={input.name} {...input} />
+      <React.Fragment>
+        <FormGroup key={input.name} {...input} />
+      </React.Fragment>
     ))}
   </form>
 );
