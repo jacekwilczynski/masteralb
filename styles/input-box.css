@@ -8,6 +8,10 @@
   margin-bottom: 1.25em;
 }
 
+.input-box:last-child {
+  margin-bottom: 0;
+}
+
 .input-box--multiline {
   height: auto;
 }

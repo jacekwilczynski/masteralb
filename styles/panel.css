@@ -6,6 +6,13 @@
   padding-right: 2em;
 }
 
+@media (max-width: 25em) {
+  .panel {
+    padding: 0;
+    min-width: initial;
+  }
+}
+
 .panel__title {
   color: #fff;
   font-family: 'Titillium Web', sans-serif;
@@ -26,9 +33,18 @@
 .panel__row {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
+.panel__row--stretch {
+  justify-content: stretch;
+}
+
+.panel__column {
+  flex-grow: 1;
+}
+
 .panel__column--equal {
-  width: 45%;
+  max-width: 45%;
 }
