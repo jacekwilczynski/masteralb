@@ -1,1 +1,13 @@
-.text-field__
+.text-field {
+  clear: both;
+  display: flex;
+}
+
+.text-field__icon-container {
+  text-align: center;
+  width: 3.75em;
+}
+
+.text-field__input {
+  width: 100%;
+}
