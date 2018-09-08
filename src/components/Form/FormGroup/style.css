@@ -3,6 +3,10 @@
   margin-bottom: 1.25em;
 }
 
+.form__group:last-child {
+  margin-bottom: 0;
+}
+
 .form__group--full-width {
   width: 100%;
 }
