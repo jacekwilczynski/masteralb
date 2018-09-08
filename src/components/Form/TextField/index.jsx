@@ -5,6 +5,7 @@ import './style.css';
 
 const TextField = ({ type, name, label, dropdown }) => {
   const icon = icons[type];
+  const InputTag = type === 'multiline' ? 'textarea' : 'input';
   return (
     <label className={'text-field text-field--' + type}>
       {icon && (
@@ -12,13 +13,15 @@ const TextField = ({ type, name, label, dropdown }) => {
           <img src={icon} alt="" className="text-field__icon" />
         </span>
       )}
-      <input
+      <InputTag
         type="text"
         name={name}
         placeholder={label}
         aria-label={label}
         className={
-          'text-field__input' + (dropdown ? ' text-field__input--dropdown' : '')
+          'text-field__input' +
+          (type === 'multiline' ? ' text-field--multiline' : '') +
+          (dropdown ? ' text-field__input--dropdown' : '')
         }
       />
       {dropdown && <span className="text-field__caret" />}
