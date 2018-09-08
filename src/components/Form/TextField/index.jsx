@@ -8,7 +8,7 @@ const TextField = ({ type, name, label }) => (
     <input
       type="text"
       name={name}
-      placeholder={name}
+      placeholder={label}
       className="text-field__input"
     />
   </label>
