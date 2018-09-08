@@ -5,16 +5,16 @@ import Checkbox from '../Checkbox';
 import TextField from '../TextField';
 
 const components = {
-  textField: TextField,
+  'text-field': TextField,
   checkbox: Checkbox,
   button: Button
 };
 
-const FormGroup = ({ type, data }) => {
+const FormGroup = ({ type, subtype, ...data }) => {
   const Component = components[type];
   return (
     <div className="form__group">
-      <Component {...data} />
+      <Component {...data} type={subtype} />
     </div>
   );
 };
