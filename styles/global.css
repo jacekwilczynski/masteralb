@@ -6,6 +6,7 @@
 body {
   background: url(../images/background.png) no-repeat -2.63em -19.31em;
   background-size: 122vw;
+  padding-bottom: 3em;
 }
 
 @media (max-width: 50em) {
