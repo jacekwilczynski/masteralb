@@ -1,0 +1,7 @@
+.form__group {
+  display: inline-block;
+}
+
+.form__group--full-width {
+  width: 100%;
+}
