@@ -1,4 +1,8 @@
 .text-field {
+  background: linear-gradient(#f7f7f7, #f2f2f2);
+  border: 1px solid #c6c6c6;
+  border-radius: 3px;
+  box-shadow: 1px 2px 0 #ffffff;
   display: flex;
 }
 
@@ -8,5 +12,9 @@
 }
 
 .text-field__input {
+  background-color: transparent;
+  border: none;
+  color: #444;
+  font: inherit;
   width: 100%;
 }

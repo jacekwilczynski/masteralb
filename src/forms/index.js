@@ -4,4 +4,4 @@ import sendEmail from './send-email.yaml';
 import signIn from './sign-in.yaml';
 import subscribe from './subscribe.yaml';
 
-export default [recover, register, sendEmail, signIn, subscribe];
+export default [register, sendEmail, signIn, recover, subscribe];
