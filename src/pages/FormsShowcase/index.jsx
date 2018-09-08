@@ -17,7 +17,8 @@ const FormsShowcase = ({ forms }) => (
 );
 
 FormsShowcase.propTypes = {
-  forms: PropTypes.shape(Form.PropTypes).isRequired
+  forms: PropTypes.arrayOf(PropTypes.shape(Form.PropTypes).isRequired)
+    .isRequired
 };
 
 export default FormsShowcase;

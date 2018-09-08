@@ -11,7 +11,8 @@ const Form = ({ textFields }) => (
 );
 
 Form.propTypes = {
-  textFields: PropTypes.shape(TextField.PropTypes).isRequired
+  textFields: PropTypes.arrayOf(PropTypes.shape(TextField.PropTypes).isRequired)
+    .isRequired
 };
 
 export default Form;
