@@ -11,9 +11,9 @@
   }
 }
 
-@media (max-width: 53em) {
+@media (max-width: 53.78em) {
   .container {
-    column-gap: 1em;
+    column-gap: 1.25em;
   }
 }
 
