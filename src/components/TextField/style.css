@@ -10,16 +10,12 @@
 
 .text-field__icon-container {
   align-items: center;
+  border-right: 1px solid #ddd;
   display: flex;
-  height: 2.45em;
+  height: 1.88em;
   justify-content: center;
   text-align: center;
   width: 3.75em;
-}
-
-.text-field__separator {
-  border-right: 1px solid #ddd;
-  height: 1.88em;
 }
 
 .text-field__caret {

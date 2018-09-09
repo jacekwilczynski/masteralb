@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: #444;
   font: inherit;
+  height: 2.45em;
   padding: 0 1.33em;
   width: 100%;
 }
@@ -30,6 +31,7 @@
 }
 
 .text-field--multiline .text-field__input {
+  height: auto;
   padding: 0.66em 1em;
   resize: vertical;
 }

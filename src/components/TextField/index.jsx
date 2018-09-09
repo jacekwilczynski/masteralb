@@ -10,12 +10,9 @@ const TextField = props => {
   return (
     <label className={'text-field text-field--' + type}>
       {icon && (
-        <React.Fragment>
-          <span className="text-field__icon-container">
-            <img src={icon} alt="" className="text-field__icon" />
-          </span>
-          <span className="text-field__separator" />
-        </React.Fragment>
+        <span className="text-field__icon-container">
+          <img src={icon} alt="" className="text-field__icon" />
+        </span>
       )}
       <Input {...props} />
       {dropdown && <span className="text-field__caret" />}
