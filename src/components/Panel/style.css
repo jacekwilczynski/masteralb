@@ -1,3 +1,8 @@
+.panel {
+  margin: 0 auto;
+  max-width: 32em;
+}
+
 .panel__title {
   color: #fff;
   font-size: 2em;
