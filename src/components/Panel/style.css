@@ -1,5 +1,6 @@
 .panel__title {
   color: #fff;
+  margin-top: 0;
   text-align: center;
   text-shadow: 1px 2px 2px rgba(43, 1, 0, 0.75);
 }
@@ -7,6 +8,7 @@
 .panel__shadow {
   background-color: rgba(0, 0, 0, 0.23);
   border-radius: 5px;
+  margin-bottom: 2em;
   padding: 1.25rem;
 }
 
