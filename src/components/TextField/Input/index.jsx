@@ -15,6 +15,7 @@ const Input = ({ name, label, type, dropdown }) => {
         (type === 'multiline' ? ' text-field--multiline' : '') +
         (dropdown ? ' text-field__input--dropdown' : '')
       }
+      rows={type === 'multiline' ? 9 : null}
     />
   );
 };
