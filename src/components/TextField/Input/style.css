@@ -11,3 +11,20 @@
 .text-field__input--dropdown {
   padding-right: 3em;
 }
+
+.text-field__input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #afafaf;
+  /* Firefox */
+  opacity: 1;
+}
+
+.text-field__input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #afafaf;
+}
+
+.text-field__input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #afafaf;
+}
