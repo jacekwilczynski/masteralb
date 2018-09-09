@@ -16,20 +16,6 @@
   width: 3.75em;
 }
 
-.text-field__input {
-  background-color: transparent;
-  border: none;
-  box-sizing: border-box;
-  color: #444;
-  font: inherit;
-  padding: 0 1.33em;
-  width: 100%;
-}
-
-.text-field__input--dropdown {
-  padding-right: 3em;
-}
-
 .text-field__caret {
   content: url(caret-down.svg);
   position: absolute;
