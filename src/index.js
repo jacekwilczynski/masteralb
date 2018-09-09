@@ -7,7 +7,9 @@ import 'style.css';
 import { loadMany } from 'utils/loadYaml';
 
 loadMany(formUrls).then(forms => {
-  ReactDOM.render(<Page forms={forms} />, document.getElementById('root'));
+  const root = document.getElementById('root');
+  const method = root.hasChildNodes() ? 'hydrate' : 'render';
+  ReactDOM[method](<Page forms={forms} />, root);
 });
 
 registerServiceWorker();
