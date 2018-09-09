@@ -34,7 +34,7 @@ const Form = ({ inputs }) => {
 };
 
 Form.propTypes = {
-  inputs: PropTypes.arrayOf(FormElement.propTypes).isRequired
+  inputs: PropTypes.arrayOf(PropTypes.shape(FormElement.propTypes)).isRequired
 };
 
 export default Form;
