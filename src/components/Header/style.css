@@ -4,5 +4,6 @@
 
 .header__logo {
   max-width: 100%;
+  margin: 1em;
   opacity: 0.5;
 }
