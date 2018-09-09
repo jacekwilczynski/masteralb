@@ -3,7 +3,8 @@ import React from 'react';
 import './style.css';
 
 const Input = ({ name, label, type, dropdown }) => {
-  const InputTag = type === 'multiline' ? 'textarea' : 'input';
+  const multiline = type === 'multiline';
+  const InputTag = multiline ? 'textarea' : 'input';
   return (
     <InputTag
       type="text"
@@ -12,10 +13,10 @@ const Input = ({ name, label, type, dropdown }) => {
       aria-label={label}
       className={
         'text-field__input' +
-        (type === 'multiline' ? ' text-field--multiline' : '') +
+        (multiline ? ' text-field--multiline' : '') +
         (dropdown ? ' text-field__input--dropdown' : '')
       }
-      rows={type === 'multiline' ? 9 : null}
+      rows={multiline ? 9 : null}
     />
   );
 };
