@@ -1,4 +1,5 @@
 import Container from 'components/Container';
+import Footer from 'components/Footer';
 import Form from 'components/Form';
 import Header from 'components/Header';
 import Panel from 'components/Panel';
@@ -15,6 +16,7 @@ const FormsShowcase = ({ forms }) => (
           <Form {...rest} />
         </Panel>
       ))}
+      <Footer />
     </Container>
   </React.Fragment>
 );
