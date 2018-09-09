@@ -1,0 +1,8 @@
+.button--cancel {
+  background: linear-gradient(#f65e6f, #f13848);
+  border: 1px solid #a21f2a;
+}
+
+.button--cancel:active {
+  background: linear-gradient(#cb5766, #b92c38);
+}
