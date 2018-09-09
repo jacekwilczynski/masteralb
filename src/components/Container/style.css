@@ -1,7 +1,20 @@
 .container {
-  column-width: 25em;
+  column-gap: 5em;
+  column-width: 20em;
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 57.44em;
+}
+
+@media (max-width: 65em) {
+  .container {
+    column-gap: calc(-16em + 32vw);
+  }
+}
+
+@media (max-width: 53em) {
+  .container {
+    column-gap: 1em;
+  }
 }
 
 .container__element {
