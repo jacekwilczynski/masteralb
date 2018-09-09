@@ -27,6 +27,7 @@ const FormElement = ({ type, subtype, ...data }) => {
 
 FormElement.propTypes = {
   type: PropTypes.string.isRequired,
+  subtype: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired
 };
 
