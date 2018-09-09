@@ -13,9 +13,9 @@
   border-right: 1px solid #ddd;
   display: flex;
   height: 1.88em;
+  min-width: 59px;
   justify-content: center;
   text-align: center;
-  width: 3.75em;
 }
 
 .text-field__caret {
