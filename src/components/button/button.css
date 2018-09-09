@@ -1,5 +1,5 @@
-@import 'button-primary.css';
-@import 'button-cancel.css';
+@import 'button--primary.css';
+@import 'button--cancel.css';
 
 .button {
   border-radius: 3px;

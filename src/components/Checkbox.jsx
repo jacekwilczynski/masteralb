@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import './style.css';
+import './checkbox/checkbox.css';
 
 const Checkbox = ({ label }) => (
   <label className="checkbox">

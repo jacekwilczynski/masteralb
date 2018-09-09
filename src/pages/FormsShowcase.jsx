@@ -5,7 +5,7 @@ import Header from 'components/Header';
 import Panel from 'components/Panel';
 import PropTypes from 'prop-types';
 import React from 'react';
-import './style.css';
+import './formsShowcase/formsShowcase.css';
 
 const FormsShowcase = ({ forms }) => (
   <React.Fragment>

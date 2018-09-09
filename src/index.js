@@ -1,5 +1,5 @@
-import formUrls from 'forms';
-import Page from 'pages/FormsShowcase/index';
+import formUrls from 'data/forms';
+import Page from 'pages/FormsShowcase';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from 'registerServiceWorker';

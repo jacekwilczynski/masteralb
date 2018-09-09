@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import icons from './icons/index';
-import Input from './Input';
-import './style.css';
+import icons from './textField/icons';
+import TextFieldInput from './textField/TextFieldInput';
+import './textField/textField.css';
 
 const TextField = props => {
   const { type, dropdown } = props;
@@ -14,7 +14,7 @@ const TextField = props => {
           <img src={icon} alt="" className="text-field__icon" />
         </span>
       )}
-      <Input {...props} />
+      <TextFieldInput {...props} />
       {dropdown && <span className="text-field__caret" />}
     </label>
   );

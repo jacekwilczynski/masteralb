@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import './style.css';
+import './textFieldInput/textFieldInput.css';
 
-const Input = ({ name, label, type, dropdown }) => {
+const TextFieldInput = ({ name, label, type, dropdown }) => {
   const multiline = type === 'multiline';
   const InputTag = multiline ? 'textarea' : 'input';
   return (
@@ -19,11 +19,11 @@ const Input = ({ name, label, type, dropdown }) => {
   );
 };
 
-Input.propTypes = {
+TextFieldInput.propTypes = {
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   dropdown: PropTypes.bool
 };
 
-export default Input;
+export default TextFieldInput;

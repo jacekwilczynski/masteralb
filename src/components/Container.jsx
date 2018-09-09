@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './container/container.css';
 
 const Container = ({ children }) => (
   <main className="container">

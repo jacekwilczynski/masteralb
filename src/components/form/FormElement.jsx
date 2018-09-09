@@ -1,9 +1,9 @@
+import Button from 'components/Button';
+import Checkbox from 'components/Checkbox';
+import TextField from 'components/TextField';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '../../Button';
-import Checkbox from '../../Checkbox';
-import TextField from '../../TextField';
-import './style.css';
+import './formElement/formElement.css';
 
 const components = {
   'text-field': TextField,
