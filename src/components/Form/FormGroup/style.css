@@ -1,6 +1,6 @@
 .form__group {
   display: inline-block;
-  margin-bottom: 1.25em;
+  padding-bottom: 1.25em;
 }
 
 .form__group:last-child {
