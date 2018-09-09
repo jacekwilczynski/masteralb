@@ -3,12 +3,12 @@ import React from 'react';
 import './style.css';
 
 const Panel = ({ children, title }) => (
-  <div className="panel">
+  <section className="panel">
     <h2 className="panel__title">{title}</h2>
     <div className="panel__shadow">
       <div className="panel__body">{children}</div>
     </div>
-  </div>
+  </section>
 );
 
 Panel.propTypes = {
