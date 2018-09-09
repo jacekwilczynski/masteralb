@@ -9,7 +9,9 @@ inputs:
     subtype: primary
     name: subscribe
     label: Subscribe
+    smallerText: true
   - type: button
     subtype: cancel
     name: cancel
     label: No, thanks
+    smallerText: true

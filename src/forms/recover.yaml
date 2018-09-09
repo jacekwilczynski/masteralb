@@ -13,8 +13,10 @@ inputs:
     subtype: primary
     name: send
     label: Send
+    smallerText: true
   - type: button
     subtype: primary
     name: done
     label: Done
     disabled: true
+    smallerText: true
