@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '../Button';
-import Checkbox from '../Checkbox';
-import TextField from '../TextField';
+import Button from '../../Button';
+import Checkbox from '../../Checkbox';
+import TextField from '../../TextField';
 import './style.css';
 
 const components = {

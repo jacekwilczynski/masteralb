@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import icons from './icons';
+import icons from './icons/index';
 import './style.css';
 
 const TextField = ({ type, name, label, dropdown }) => {
