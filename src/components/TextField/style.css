@@ -23,7 +23,3 @@
   top: 50%;
   transform: translate(50%, -40%);
 }
-
-.text-field--multiline {
-  resize: vertical;
-}

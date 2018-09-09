@@ -28,3 +28,8 @@
   /* Microsoft Edge */
   color: #afafaf;
 }
+
+.text-field--multiline .text-field__input {
+  padding: 0.66em 1em;
+  resize: vertical;
+}

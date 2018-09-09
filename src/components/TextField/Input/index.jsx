@@ -12,9 +12,7 @@ const Input = ({ name, label, type, dropdown }) => {
       placeholder={label}
       aria-label={label}
       className={
-        'text-field__input' +
-        (multiline ? ' text-field--multiline' : '') +
-        (dropdown ? ' text-field__input--dropdown' : '')
+        'text-field__input' + (dropdown ? ' text-field__input--dropdown' : '')
       }
       rows={multiline ? 9 : null}
     />
