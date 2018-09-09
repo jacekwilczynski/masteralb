@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FormElement from './FormElement';
-import './style.css';
+import FormElement from './form/FormElement';
+import './form/form.css';
 
 const split = condition => array => {
   const matches = [];
@@ -20,9 +20,7 @@ const Form = ({ inputs }) => {
   return (
     <form action="#" className="form">
       {textFields.map(input => (
-        <React.Fragment key={input.name}>
-          <FormElement {...input} />
-        </React.Fragment>
+        <FormElement key={input.name} {...input} />
       ))}
       <div className="form__row">
         {others.map(input => (

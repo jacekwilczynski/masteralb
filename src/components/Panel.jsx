@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import './style.css';
+import './panel/panel.css';
 
 const Panel = ({ children, title }) => (
   <section className="panel">
