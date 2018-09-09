@@ -5,7 +5,7 @@
   margin-right: -2em;
 }
 
-.form__row > .form__group {
+.form__row > .form__element {
   flex-grow: 1;
   margin-right: 2em;
 }

@@ -1,12 +1,12 @@
-.form__group {
+.form__element {
   display: inline-block;
   padding-bottom: 1.25em;
 }
 
-.form__group:last-child {
+.form__element:last-child {
   margin-bottom: 0;
 }
 
-.form__group--full-width {
+.form__element--full-width {
   width: 100%;
 }

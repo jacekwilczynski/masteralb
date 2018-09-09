@@ -11,13 +11,13 @@ const components = {
   button: Button
 };
 
-const FormGroup = ({ type, subtype, ...data }) => {
+const FormElement = ({ type, subtype, ...data }) => {
   const Component = components[type];
   return (
     <div
       className={
-        'form__group' +
-        (type === 'text-field' ? ' form__group--full-width' : '')
+        'form__element' +
+        (type === 'text-field' ? ' form__element--full-width' : '')
       }
     >
       <Component {...data} type={subtype} />
@@ -25,9 +25,9 @@ const FormGroup = ({ type, subtype, ...data }) => {
   );
 };
 
-FormGroup.propTypes = {
+FormElement.propTypes = {
   type: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired
 };
 
-export default FormGroup;
+export default FormElement;
