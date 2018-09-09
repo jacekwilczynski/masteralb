@@ -1,3 +1,4 @@
+import Container from 'components/Container';
 import Form from 'components/Form';
 import Header from 'components/Header';
 import Panel from 'components/Panel';
@@ -6,14 +7,16 @@ import React from 'react';
 import './style.css';
 
 const FormsShowcase = ({ forms }) => (
-  <div>
+  <React.Fragment>
     <Header />
-    {forms.map(({ name, title, ...rest }) => (
-      <Panel key={name} title={title}>
-        <Form {...rest} />
-      </Panel>
-    ))}
-  </div>
+    <Container>
+      {forms.map(({ name, title, ...rest }) => (
+        <Panel key={name} title={title}>
+          <Form {...rest} />
+        </Panel>
+      ))}
+    </Container>
+  </React.Fragment>
 );
 
 FormsShowcase.propTypes = {
