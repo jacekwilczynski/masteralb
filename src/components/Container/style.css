@@ -16,7 +16,3 @@
     column-gap: 1.25em;
   }
 }
-
-.container__element {
-  page-break-inside: avoid;
-}
