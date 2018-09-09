@@ -2,10 +2,10 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -2em;
+  margin-right: -2.69em;
 }
 
 .form__element {
   flex-grow: 1;
-  margin-right: 2em;
+  margin-right: 2.69em;
 }
