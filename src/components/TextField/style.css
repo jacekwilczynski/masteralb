@@ -1,4 +1,5 @@
 .text-field {
+  align-items: center;
   background: linear-gradient(#f7f7f7, #f2f2f2);
   border: 1px solid #c6c6c6;
   border-radius: 3px;
@@ -14,6 +15,11 @@
   justify-content: center;
   text-align: center;
   width: 3.75em;
+}
+
+.text-field__separator {
+  border-right: 1px solid #ddd;
+  height: 1.88em;
 }
 
 .text-field__caret {
