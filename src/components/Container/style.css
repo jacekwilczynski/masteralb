@@ -18,5 +18,5 @@
 }
 
 .container__element {
-  page-break-inside: avoid;
+  break-inside: avoid;
 }
