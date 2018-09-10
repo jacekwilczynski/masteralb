@@ -19,7 +19,6 @@
 }
 
 .text-field__caret {
-  content: url(caret-down.svg);
   position: absolute;
   right: 1.5em;
   top: 50%;

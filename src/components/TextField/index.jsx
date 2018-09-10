@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import caret from './caret-down.svg';
 import icons from './icons/index';
 import Input from './Input';
 import './style.css';
@@ -15,7 +16,7 @@ const TextField = props => {
         </span>
       )}
       <Input {...props} />
-      {dropdown && <span className="text-field__caret" />}
+      {dropdown && <img src={caret} alt="" className="text-field__caret" />}
     </label>
   );
 };
