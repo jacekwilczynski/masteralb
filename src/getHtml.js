@@ -8,6 +8,7 @@ const getHtml = element =>
     .replace(inlinedImageData, '')
     .replace(dataSrcAttributes, 'src="images/$1"')
     .replace(/\/>/g, '>')
-    .replace(/>/g, '>\n');
+    .replace(/>/g, '>\n')
+    .replace(/</g, '\n<');
 
 export default getHtml;
