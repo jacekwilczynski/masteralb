@@ -33,6 +33,14 @@ module.exports = function registerHtmlRelatedGulpTasks(baseDir) {
     return gulp
       .src('public/index.html')
       .pipe(
+        modify(content =>
+          content.replace(
+            '</head>',
+            '<link rel="stylesheet" href="styles/index.css">\n</head>'
+          )
+        )
+      )
+      .pipe(
         modify(content => content.replace('<div id="root"></div>\n', rendered))
       )
       .pipe(modify(removeComments))
