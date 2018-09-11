@@ -19,17 +19,31 @@ module.exports = function registerCssRelatedGulpTasks(baseDir) {
     cssFiles
       .filter(fileName => fileName.indexOf('--') >= 0)
       .forEach(fileName => {
+        const moduleName = fileName.slice(0, fileName.indexOf('--'));
         const moduleFolder = path.resolve(
           baseDir,
           'build',
           'styles',
-          fileName.slice(0, fileName.indexOf('--'))
+          moduleName
+        );
+        const filePath = path.resolve(moduleFolder, fileName);
+        const moduleFile = path.resolve(
+          baseDir,
+          'build',
+          'styles',
+          moduleName + '.css'
         );
         if (!fs.existsSync(moduleFolder)) fs.mkdirSync(moduleFolder);
         fs.renameSync(
           path.resolve(baseDir, 'build', 'styles', fileName),
-          path.resolve(moduleFolder, fileName)
+          filePath
         );
+        const moduleCss = fs.readFileSync(moduleFile, 'utf-8');
+        const withUpdatedImports = moduleCss.replace(
+          new RegExp(fileName),
+          `${moduleName}/${fileName}`
+        );
+        fs.writeFileSync(moduleFile, withUpdatedImports);
       });
   });
 
