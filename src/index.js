@@ -12,7 +12,8 @@ loadMany(formUrls).then(forms => {
   ReactDOM.render(element, document.getElementById('root'));
   console.log(
     renderToStaticMarkup(element)
-      .replace(/data:image[^"]*"/g, '"')
+      .replace(/src="data:image[^"]*"\s?/g, '')
+      .replace(/data-src="([^"]*)"/g, 'src="images/$1"')
       .replace(/>/g, '>\n')
   );
 });
