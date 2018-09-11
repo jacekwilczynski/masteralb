@@ -20,6 +20,23 @@ gulp.task('copyCss', function() {
     .pipe(gulp.dest('build/styles'));
 });
 
+gulp.task('groupByModule', ['copyCss'], function() {
+  const cssFiles = fileNames.get('styles');
+  cssFiles.filter(fileName => fileName.indexOf('--') >= 0).forEach(fileName => {
+    const moduleFolder = path.resolve(
+      __dirname,
+      'build',
+      'styles',
+      fileName.slice(0, fileName.indexOf('--'))
+    );
+    if (!fs.existsSync(moduleFolder)) fs.mkdirSync(moduleFolder);
+    fs.renameSync(
+      path.resolve(__dirname, 'build', 'styles', fileName),
+      path.resolve(moduleFolder, fileName)
+    );
+  });
+});
+
 gulp.task('createIndexCss', ['copyCss'], function() {
   const cssFiles = fileNames.get('styles');
   const isTopLevel = fileName => fileName.indexOf('--') < 0;
@@ -33,4 +50,6 @@ gulp.task('createIndexCss', ['copyCss'], function() {
   );
 });
 
-gulp.task('default', ['beautifyHtml', 'createIndexCss']);
+gulp.task('processCss', ['copyCss', 'createIndexCss', 'groupByModule']);
+
+gulp.task('default', ['beautifyHtml', 'processCss']);
