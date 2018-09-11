@@ -23,7 +23,7 @@ function saveHtml(html) {
   const buildDir = path.resolve(__dirname, 'build');
   if (fs.existsSync(buildDir)) fs.removeSync(buildDir);
   fs.mkdirSync(buildDir);
-  const targetFile = path.resolve(buildDir, 'index.html');
+  const targetFile = path.resolve(buildDir, 'root.html');
   console.log('Saving html to ' + targetFile);
   return fs.writeFile(targetFile, html, 'utf-8');
 }
