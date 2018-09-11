@@ -5,7 +5,7 @@ const fileNames = require('gulp-filenames');
 const fs = require('fs');
 const modify = require('gulp-modify-file');
 
-module.exports = function cssGulpFile(baseDir) {
+module.exports = function registerCssRelatedGulpTasks(baseDir) {
   gulp.task('copyCss', function() {
     return gulp
       .src('src/**/*.css')
