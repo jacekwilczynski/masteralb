@@ -1,6 +1,7 @@
-const fs = require('fs');
+const fs = require('fs-extra');
 const http = require('http');
 const gulp = require('gulp');
+const path = require('path');
 require('./gulpfile');
 
 function getRequestBody(req) {
@@ -19,25 +20,29 @@ function sendResponse(res) {
 }
 
 function saveHtml(html) {
-  return new Promise(function(resolve) {
-    fs.writeFile(
-      path.resolve(__dirname, 'build', 'index.html', html, 'utf-8'),
-      resolve
-    );
-  });
+  const buildDir = path.resolve(__dirname, 'build');
+  if (fs.existsSync(buildDir)) fs.removeSync(buildDir);
+  fs.mkdirSync(buildDir);
+  const targetFile = path.resolve(buildDir, 'index.html');
+  console.log('Saving html to ' + targetFile);
+  return fs.writeFile(targetFile, html, 'utf-8');
 }
 
 function runGulp() {
-  gulp.parallel(['default']);
+  gulp.start('default');
 }
 
 http
   .createServer(async function(req, res) {
     if (req.method === 'POST') {
       const html = await getRequestBody(req);
+      console.log('Got html.');
       sendResponse(res);
       await saveHtml(html);
+      console.log('Saved html. Running gulp...');
       runGulp();
     }
   })
-  .listen(5000);
+  .listen(5000, function() {
+    console.log('Build server listening on port 5000.');
+  });

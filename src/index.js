@@ -10,7 +10,7 @@ import { loadMany } from 'utils/loadYaml';
 loadMany(formUrls).then(forms => {
   const element = <Page forms={forms} />;
   ReactDOM.render(element, document.getElementById('root'));
-  console.log(getHtml(element));
+  fetch('/', { method: 'POST', body: getHtml(element) });
 });
 
 registerServiceWorker();
