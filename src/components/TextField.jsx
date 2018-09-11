@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import caret from './caret-down.svg';
-import icons from './icons/index';
-import Input from './Input';
-import './style.css';
+import caret from './textField/caret-down.svg';
+import icons from './textField/icons';
+import './textField/textField.css';
+import TextFieldInput from './textField/TextFieldInput';
 
 const TextField = props => {
   const { type, dropdown } = props;
