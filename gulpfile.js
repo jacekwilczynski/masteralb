@@ -1,15 +1,8 @@
 const gulp = require('gulp');
-const beautifyHtml = require('gulp-html-beautify');
 const path = require('path');
 const flatten = require('gulp-flatten');
+require('./gulpfile/html')(__dirname);
 require('./gulpfile/css')(__dirname);
-
-gulp.task('beautifyHtml', function() {
-  return gulp
-    .src('build/index.html')
-    .pipe(beautifyHtml({ indent_size: 2 }))
-    .pipe(gulp.dest(path.resolve(__dirname, 'build')));
-});
 
 gulp.task('copyImages', function() {
   return gulp
@@ -25,7 +18,7 @@ gulp.task('copyFavIcon', function() {
 });
 
 gulp.task('default', [
-  'beautifyHtml',
+  'processHtml',
   'processCss',
   'copyImages',
   'copyFavIcon'
