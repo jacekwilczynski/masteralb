@@ -12,11 +12,23 @@ const TextField = props => {
     <label className={'text-field text-field--' + type}>
       {icon && (
         <span className="text-field__icon-container">
-          <img src={icon} alt="" className="text-field__icon" />
+          <img
+            src={icon}
+            alt=""
+            className="text-field__icon"
+            data-src={fileNames[type]}
+          />
         </span>
       )}
       <TextFieldInput {...props} />
-      {dropdown && <img src={caret} alt="" className="text-field__caret" />}
+      {dropdown && (
+        <img
+          src={caret}
+          alt=""
+          className="text-field__caret"
+          data-src="caret-down.svg"
+        />
+      )}
     </label>
   );
 };
