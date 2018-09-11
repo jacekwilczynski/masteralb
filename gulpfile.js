@@ -18,4 +18,15 @@ gulp.task('copyImages', function() {
     .pipe(gulp.dest(path.resolve(__dirname, 'build', 'images')));
 });
 
-gulp.task('default', ['beautifyHtml', 'processCss', 'copyImages']);
+gulp.task('copyFavIcon', function() {
+  return gulp
+    .src('public/favicon.ico')
+    .pipe(gulp.dest(path.resolve(__dirname, 'build')));
+});
+
+gulp.task('default', [
+  'beautifyHtml',
+  'processCss',
+  'copyImages',
+  'copyFavIcon'
+]);
