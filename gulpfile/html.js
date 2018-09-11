@@ -32,12 +32,12 @@ module.exports = function registerHtmlRelatedGulpTasks(baseDir) {
     fs.removeSync(renderedFile);
     return gulp
       .src('public/index.html')
-      .pipe(modify(removeComments))
-      .pipe(modify(removeUnwantedLines))
       .pipe(
         modify(content => content.replace('<div id="root"></div>\n', rendered))
       )
       .pipe(beautifyHtml({ indent_size: 2 }))
+      .pipe(modify(removeComments))
+      .pipe(modify(removeUnwantedLines))
       .pipe(gulp.dest(path.resolve(baseDir, 'build')));
   });
 };
