@@ -13,14 +13,23 @@ const removeComments = content => {
   return modified;
 };
 
-const removeEmptyLines = content => content.replace(/\n\s*\n/g, '\n');
+const removeUnwantedLines = content => {
+  const lines = content.split('\n');
+  const wantedLines = lines.filter(
+    line =>
+      line.indexOf('meta name="theme-color"') < 0 &&
+      line.indexOf('%PUBLIC_URL%') < 0 &&
+      line.match(/[^\s\n]/)
+  );
+  return wantedLines.join('\n');
+};
 
 module.exports = function registerHtmlRelatedGulpTasks(baseDir) {
   gulp.task('copyHtml', function() {
     return gulp
       .src('public/index.html')
       .pipe(modify(removeComments))
-      .pipe(modify(removeEmptyLines))
+      .pipe(modify(removeUnwantedLines))
       .pipe(gulp.dest('build'));
   });
 
