@@ -57,5 +57,10 @@ module.exports = function registerCssRelatedGulpTasks(baseDir) {
       .pipe(gulp.dest(path.resolve(baseDir, 'build', 'styles')));
   });
 
-  gulp.task('processCss', ['copyCss', 'createIndexCss', 'groupByModule']);
+  gulp.task('processCss', [
+    'copyCss',
+    'createIndexCss',
+    'groupByModule',
+    'fixAssetUrls'
+  ]);
 };
