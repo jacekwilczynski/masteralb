@@ -22,10 +22,11 @@ gulp.task('copyCss', function() {
 
 gulp.task('createIndexCss', ['copyCss'], function() {
   const cssFiles = fileNames.get('styles');
+  const isTopLevel = fileName => fileName.indexOf('--') < 0;
   fs.writeFileSync(
     path.resolve(__dirname, 'build/styles/index.css'),
     cssFiles
-      .filter(fileName => fileName.indexOf('--') < 0)
+      .filter(isTopLevel)
       .map(fileName => `@import '${fileName}';\n`)
       .join(''),
     'utf-8'
