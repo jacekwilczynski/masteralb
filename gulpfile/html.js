@@ -35,8 +35,8 @@ module.exports = function registerHtmlRelatedGulpTasks(baseDir) {
       .pipe(
         modify(content => content.replace('<div id="root"></div>\n', rendered))
       )
-      .pipe(beautifyHtml({ indent_size: 2 }))
       .pipe(modify(removeComments))
+      .pipe(beautifyHtml({ indent_size: 2 }))
       .pipe(modify(removeUnwantedLines))
       .pipe(gulp.dest(path.resolve(baseDir, 'build')));
   });
