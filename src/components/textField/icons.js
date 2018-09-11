@@ -8,8 +8,8 @@ export const fileNames = {
   user: 'glyphicons_003_user.png',
   email: 'glyphicons_010_envelope.png',
   phone: 'glyphicons_139_phone.png',
-  lock: 'glyphicons_203_lock.png',
-  googleMaps: 'glyphicons_242_google_maps.png'
+  password: 'glyphicons_203_lock.png',
+  location: 'glyphicons_242_google_maps.png'
 };
 
 export default {
