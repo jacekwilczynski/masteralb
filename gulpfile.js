@@ -6,9 +6,9 @@ require('./gulpfile/css')(__dirname);
 
 gulp.task('beautifyHtml', function() {
   return gulp
-    .src(path.resolve(__dirname, 'build/index.html'))
+    .src(path.resolve(__dirname, 'build', 'index.html'))
     .pipe(beautifyHtml({ indent_size: 2 }))
-    .pipe(gulp.dest(path.resolve(__dirname, 'build/')));
+    .pipe(gulp.dest(path.resolve(__dirname, 'build')));
 });
 
 gulp.task('copyImages', function() {
