@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const beautifyHtml = require('gulp-html-beautify');
 const path = require('path');
+const flatten = require('gulp-flatten');
 require('./gulpfile/css')(__dirname);
 
 gulp.task('beautifyHtml', function() {
@@ -10,4 +11,11 @@ gulp.task('beautifyHtml', function() {
     .pipe(gulp.dest(path.resolve(__dirname, 'build/')));
 });
 
-gulp.task('default', ['beautifyHtml', 'processCss']);
+gulp.task('copyImages', function() {
+  return gulp
+    .src(path.resolve(__dirname, 'src/**/*.{png,jpg,jpeg,gif,webp,svg}'))
+    .pipe(flatten())
+    .pipe(gulp.dest(path.resolve(__dirname, 'build', 'images')));
+});
+
+gulp.task('default', ['beautifyHtml', 'processCss', 'copyImages']);
