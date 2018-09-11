@@ -14,6 +14,7 @@ loadMany(formUrls).then(forms => {
     renderToStaticMarkup(element)
       .replace(/src="data:image[^"]*"\s?/g, '')
       .replace(/data-src="([^"]*)"/g, 'src="images/$1"')
+      .replace(/\/>/g, '>')
       .replace(/>/g, '>\n')
   );
 });
