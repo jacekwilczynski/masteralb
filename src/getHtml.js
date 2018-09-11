@@ -10,7 +10,6 @@ const getHtml = element =>
     .replace(localSrcs, '')
     .replace(dataSrcAttributes, 'src="images/$1"')
     .replace(/\/>/g, '>')
-    .replace(/>/g, '>\n')
-    .replace(/</g, '\n<');
+    .replace(/>\s*</g, '>\n<');
 
 export default getHtml;
