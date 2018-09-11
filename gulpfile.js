@@ -6,14 +6,14 @@ require('./gulpfile/css')(__dirname);
 
 gulp.task('beautifyHtml', function() {
   return gulp
-    .src(path.resolve(__dirname, 'build', 'index.html'))
+    .src('build/index.html')
     .pipe(beautifyHtml({ indent_size: 2 }))
     .pipe(gulp.dest(path.resolve(__dirname, 'build')));
 });
 
 gulp.task('copyImages', function() {
   return gulp
-    .src(path.resolve(__dirname, 'src/**/*.{png,jpg,jpeg,gif,webp,svg}'))
+    .src('src/**/*.{png,jpg,jpeg,gif,webp,svg}')
     .pipe(flatten())
     .pipe(gulp.dest(path.resolve(__dirname, 'build', 'images')));
 });
