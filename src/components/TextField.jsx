@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import caret from './textField/caret-down.svg';
-import icons from './textField/icons';
+import icons, { fileNames } from './textField/icons';
 import './textField/textField.css';
 import TextFieldInput from './textField/TextFieldInput';
 
@@ -12,7 +12,12 @@ const TextField = props => {
     <label className={'text-field text-field--' + type}>
       {icon && (
         <span className="text-field__icon-container">
-          <img src={icon} alt="" className="text-field__icon" />
+          <img
+            src={icon}
+            alt=""
+            className="text-field__icon"
+            data-src={fileNames[type]}
+          />
         </span>
       )}
       <Input {...props} />
