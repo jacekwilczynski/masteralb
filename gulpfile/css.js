@@ -3,6 +3,7 @@ const flatten = require('gulp-flatten');
 const path = require('path');
 const fileNames = require('gulp-filenames');
 const fs = require('fs');
+const modify = require('gulp-modify-file');
 
 module.exports = function cssGulpFile(baseDir) {
   gulp.task('copyCss', function() {
@@ -43,6 +44,17 @@ module.exports = function cssGulpFile(baseDir) {
         .join(''),
       'utf-8'
     );
+  });
+
+  gulp.task('fixAssetUrls', ['copyCss'], function() {
+    return gulp
+      .src('build/styles/**/*.css')
+      .pipe(
+        modify(content =>
+          content.replace(/(url\('?)([^)]*)/g, '$1../images/$2')
+        )
+      )
+      .pipe(gulp.dest(path.resolve(baseDir, 'build', 'styles')));
   });
 
   gulp.task('processCss', ['copyCss', 'createIndexCss', 'groupByModule']);
