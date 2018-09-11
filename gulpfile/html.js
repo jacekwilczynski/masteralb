@@ -17,13 +17,12 @@ const removeComments = content => {
 const removeUnwantedLines = content => {
   const lines = content.split('\n');
   const wantedLines = lines.filter(
-    line =>
-      line.indexOf('meta name="theme-color"') < 0 &&
-      line.indexOf('%PUBLIC_URL%') < 0 &&
-      line.match(/[^\s\n]/)
+    line => line.indexOf('meta name="theme-color"') < 0 && line.match(/[^\s\n]/)
   );
   return wantedLines.join('\n');
 };
+
+const removePublicUrl = content => content.replace(/%PUBLIC_URL%\//g, '');
 
 module.exports = function registerHtmlRelatedGulpTasks(baseDir) {
   gulp.task('processHtml', function() {
@@ -46,6 +45,7 @@ module.exports = function registerHtmlRelatedGulpTasks(baseDir) {
       .pipe(modify(removeComments))
       .pipe(beautifyHtml({ indent_size: 2 }))
       .pipe(modify(removeUnwantedLines))
+      .pipe(modify(removePublicUrl))
       .pipe(gulp.dest(path.resolve(baseDir, 'build')));
   });
 };

@@ -11,15 +11,10 @@ gulp.task('copyImages', function() {
     .pipe(gulp.dest(path.resolve(__dirname, 'build', 'images')));
 });
 
-gulp.task('copyFavIcon', function() {
+gulp.task('copyMeta', function() {
   return gulp
-    .src('public/favicon.ico')
+    .src(['public/favicon.ico', 'public/manifest.json'])
     .pipe(gulp.dest(path.resolve(__dirname, 'build')));
 });
 
-gulp.task('default', [
-  'processHtml',
-  'processCss',
-  'copyImages',
-  'copyFavIcon'
-]);
+gulp.task('default', ['processHtml', 'processCss', 'copyImages', 'copyMeta']);
