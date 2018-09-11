@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "concurrently \"node builder\" \"react-scripts start\"",
+    "build": "concurrently \"node builder\" \"react-scripts start\" && gulp",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const beautifyHtml = require('gulp-html-beautify');
 const path = require('path');
 const modify = require('gulp-modify-file');
+const fs = require('fs-extra');
 
 const removeComments = content => {
   let modified = content;
@@ -25,20 +26,18 @@ const removeUnwantedLines = content => {
 };
 
 module.exports = function registerHtmlRelatedGulpTasks(baseDir) {
-  gulp.task('copyHtml', function() {
+  gulp.task('processHtml', function() {
+    const renderedFile = path.resolve(baseDir, 'build', 'rendered.html');
+    const rendered = fs.readFileSync(renderedFile, 'utf-8');
+    fs.removeSync(renderedFile);
     return gulp
       .src('public/index.html')
       .pipe(modify(removeComments))
       .pipe(modify(removeUnwantedLines))
-      .pipe(gulp.dest('build'));
-  });
-
-  gulp.task('beautifyHtml', function() {
-    return gulp
-      .src('build/index.html')
+      .pipe(
+        modify(content => content.replace('<div id="root"></div>\n', rendered))
+      )
       .pipe(beautifyHtml({ indent_size: 2 }))
       .pipe(gulp.dest(path.resolve(baseDir, 'build')));
   });
-
-  gulp.task('processHtml', ['copyHtml']);
 };

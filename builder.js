@@ -23,7 +23,7 @@ function saveHtml(html) {
   const buildDir = path.resolve(__dirname, 'build');
   if (fs.existsSync(buildDir)) fs.removeSync(buildDir);
   fs.mkdirSync(buildDir);
-  const targetFile = path.resolve(buildDir, 'root.html');
+  const targetFile = path.resolve(buildDir, 'rendered.html');
   console.log('Saving html to ' + targetFile);
   return fs.writeFile(targetFile, html, 'utf-8');
 }
@@ -39,7 +39,7 @@ http
       console.log('Got html.');
       sendResponse(res);
       await saveHtml(html);
-      console.log('Saved html. Running gulp...');
+      console.log('Saved html.');
       runGulp();
     }
   })
