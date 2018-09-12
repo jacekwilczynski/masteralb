@@ -6,6 +6,16 @@
 }
 
 .form__element {
+  display: inline-block;
   flex-grow: 1;
   margin-right: 2.69em;
+  padding-bottom: 1.25em;
+}
+
+.form__element:last-child {
+  margin-bottom: 0;
+}
+
+.form__element--full-width {
+  width: 100%;
 }

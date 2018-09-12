@@ -3,7 +3,6 @@ import Checkbox from 'components/Checkbox';
 import TextField from 'components/TextField';
 import PropTypes from 'prop-types';
 import React from 'react';
-import './formElement/formElement.css';
 
 const components = {
   'text-field': TextField,
