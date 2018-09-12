@@ -2,12 +2,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import './textFieldInput/textFieldInput.css';
 
+const inputTypes = {
+  email: 'email',
+  phone: 'tel'
+};
+
 const TextFieldInput = ({ name, label, type, dropdown }) => {
   const multiline = type === 'multiline';
   const InputTag = multiline ? 'textarea' : 'input';
+  const inputType = inputTypes[type] || 'text';
   return (
     <InputTag
-      type="text"
+      type={inputType}
       name={name}
       placeholder={label}
       aria-label={label}
