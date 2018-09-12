@@ -20,9 +20,7 @@ const Form = ({ inputs }) => {
   return (
     <form action="#" className="form">
       {textFields.map(input => (
-        <React.Fragment key={input.name}>
-          <FormElement {...input} />
-        </React.Fragment>
+        <FormElement key={input.name} {...input} />
       ))}
       <div className="form__row">
         {others.map(input => (
