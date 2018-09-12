@@ -1,0 +1,37 @@
+.text-field__input {
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: #444;
+  font: inherit;
+  height: 2.45em;
+  padding: 0 1.33em;
+  width: 100%;
+}
+
+.text-field__input--dropdown {
+  padding-right: 3em;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.text-field__input::placeholder {
+  color: #afafaf;
+  /* Firefox */
+  opacity: 1;
+}
+
+/* Internet Explorer 10-11 */
+.text-field__input:-ms-input-placeholder {
+  color: #afafaf;
+}
+
+/* Microsoft Edge */
+.text-field__input::-ms-input-placeholder {
+  color: #afafaf;
+}
+
+.text-field--multiline .text-field__input {
+  height: auto;
+  padding: 0.66em 1em;
+  resize: vertical;
+}
